@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
@@ -17,14 +16,7 @@ export default defineConfig({
   plugins: [
     vue(),
     legacy({
-      targets: 'ie >= 11',
+      targets: 'ie > 11',
     }),
   ],
-  css: {
-    preprocessorOptions: {
-      sass: {
-        additionalData: '@import "./src/assets/styles/index"',
-      },
-    },
-  },
 });

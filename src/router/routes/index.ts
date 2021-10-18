@@ -1,3 +1,5 @@
+import Home from '@/views/Home.vue';
+
 export default [
   {
     path: '/',
@@ -5,6 +7,6 @@ export default [
   },
   {
     path: '/blog',
-    component: () => import('@/components/HelloWorld.vue'),
+    component: Home,
   },
 ];
