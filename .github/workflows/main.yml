@@ -29,9 +29,7 @@ jobs:
       - run: |
           yarn --frozen-lockfile
           yarn build && cp -R docs dist && cp _config.yml dist
-      - uses: JamesIves/github-pages-deploy-action@4.1.4
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: dist
-          branch: gh-pages
-          GRAPHQL_TOKEN: ${{secrets.GRAPHQL_TOKEN}}
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
