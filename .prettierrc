@@ -1,11 +1,9 @@
 {
   "singleQuote": true,
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": {
-        "parser": "html"
-      }
-    }
-  ]
+  "printWidth": 80,
+  "htmlWhitespaceSensitivity": "css",
+  "bracketSameLine": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "arrowParens": "always"
 }

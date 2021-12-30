@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { getContent } from '@/apis';
 
 const menu = ref([] as any[]);
@@ -9,6 +10,7 @@ const getMenu = (path: string) => {
     if (res.status === 200) {
       const data = await res.json();
       if (data instanceof Object && data.type === 'file') {
+        // if typeof data is file, goto preview
         window.location.href = `/blog/${data.path.split(/\.[^.]*$/)[0]}`;
       } else {
         menu.value = data;
@@ -18,8 +20,9 @@ const getMenu = (path: string) => {
 };
 getMenu('docs');
 
+const router = useRouter();
 const handleClick = (path: string) => {
-  console.log(path);
+  router.push(`/blog/explorer?path=${path}`);
 };
 </script>
 
@@ -27,21 +30,16 @@ const handleClick = (path: string) => {
   <header class="flex items-center">
     <h1 class="flex items-center m-3">
       <img src="/favicon.svg" alt="Toms Blog" class="mr-4" />
-      <span class="hidden lg:block">Toms Blog</span>
+      <span class="hidden xl:block">Toms Blog</span>
     </h1>
     <nav class="justify-start hidden lg:flex">
       <div
         v-for="(item, index) in menu"
         :key="item.sha || index"
-        class="mx-5 my-3 p-px text-center"
-      >
+        class="mx-5 my-3 p-px text-center">
         <a
           rel="noopener noreferrer"
-          class="
-            cursor-pointer
-            border-transparent border-b-2
-            hover:border-blue-300
-          "
+          class="cursor-pointer border-transparent border-b-2 hover:border-blue-300"
           @click="handleClick(item.path)"
           >{{ item.name }}</a
         >
