@@ -38,6 +38,9 @@ const handleClick = (path: string, type: string) => {
       import.meta.env.MODE === 'development' && 'https://halfkai.github.io'
     }/blog/${path.replace(/\..*$/, '')}`;
   }
+  if (type === 'dir') {
+    getData(path);
+  }
 };
 </script>
 
@@ -45,7 +48,11 @@ const handleClick = (path: string, type: string) => {
   <div class="flex flex-col w-full h-full">
     <ul v-if="menu?.length" class="p-5">
       <li v-for="li in menu" :key="li.sha">
-        <a @click="handleClick(li.path, li.type)">{{ li.name }}</a>
+        <a
+          class="cursor-pointer text-blue-500"
+          @click="handleClick(li.path, li.type)"
+          >{{ li.name }}</a
+        >
       </li>
     </ul>
     <iframe
