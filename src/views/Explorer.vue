@@ -35,7 +35,8 @@ const filePath = ref();
 const handleClick = (path: string, type: string) => {
   if (type === 'file') {
     filePath.value = `${
-      import.meta.env.MODE === 'development' && 'https://halfkai.github.io'
+      (import.meta.env.MODE === 'development' && 'https://halfkai.github.io') ||
+      ''
     }/blog/${path.replace(/\..*$/, '')}`;
   }
   if (type === 'dir') {
