@@ -1,4 +1,4 @@
-email: kai475@163.com
+email: 0x158105@gmail.com
 lsi: false
 safe: true
 incremental: false
@@ -13,4 +13,4 @@ kramdown:
 defaults:
   - values:
       toc: true
-      # mathjax: true
+      mathjax: true
