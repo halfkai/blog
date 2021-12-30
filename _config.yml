@@ -13,4 +13,4 @@ kramdown:
 defaults:
   - values:
       toc: true
-      mathjax: true
+      # mathjax: true
