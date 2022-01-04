@@ -17,7 +17,6 @@ jobs:
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,10 +28,9 @@ jobs:
       - run: |
           yarn --frozen-lockfile
           yarn build && cp -R docs dist && cp _config.yml dist/docs
-          rm dist/.nojekyll
       - uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-      - run: |
+          enable_jekyll: true
