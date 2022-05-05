@@ -7,7 +7,8 @@
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "generate": ""
   },
   "dependencies": {
     "ky": "^0.28.5",
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.4",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
     "prettier": "^2.5.1",
