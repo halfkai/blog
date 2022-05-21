@@ -17,7 +17,7 @@ export default defineConfig({
   plugins: [
     vue(),
     legacy({
-      targets: ['default', 'not IE 11'],
+      targets: ['defaults', 'not IE 11'],
     }),
     Unocss({
       presets: [
