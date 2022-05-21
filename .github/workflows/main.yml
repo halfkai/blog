@@ -26,6 +26,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: |
+          yarn set version berry
           yarn
           yarn build && cp -R docs dist && cp _config.yml dist
       - uses: peaceiris/actions-gh-pages@v3
