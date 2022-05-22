@@ -2096,6 +2096,7 @@ __metadata:
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-vue: latest
+    ky: ^0.30.0
     normalize.css: ^8.0.1
     pinia: ^2.0.14
     typescript: ^4.6.4
@@ -2749,6 +2750,13 @@ __metadata:
   version: 1.5.1
   resolution: "kolorist@npm:1.5.1"
   checksum: c113be08834fc03a24699612141c79879fceba9ff9765ad500507fb594ee4fa3465a3453ea90bbc9b0dd82f7ba5dbd79814da28e9ebaf8da27266a0088ba2714
+  languageName: node
+  linkType: hard
+
+"ky@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "ky@npm:0.30.0"
+  checksum: d6ec6461e18cd2e4abb809b0574ff704c2e17bd61248843471c2492dd9486dfeadd4d139a5a6ec194b0175f9bc7b8c634685880d1ac646553a9f440c0982e8d3
   languageName: node
   linkType: hard
 
