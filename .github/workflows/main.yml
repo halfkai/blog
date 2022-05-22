@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 16
           check-latest: true
-          # cache: 'yarn'
+          cache: 'yarn'
       - run: |
           yarn --immutable
           yarn build && cp -R docs dist && cp _config.yml dist
