@@ -1,0 +1,17 @@
+# jekyll theme config
+email: 0x158105@gmail.com
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+theme: jekyll-theme-architect
+gist:
+  noscript: false
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+defaults:
+  - values:
+      toc: true
+      mathjax: true
