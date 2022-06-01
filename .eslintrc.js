@@ -6,9 +6,10 @@ module.exports = {
     'vue/setup-compiler-macros': true,
   },
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
     'airbnb-typescript/base',
-    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
   ],
   parser: 'vue-eslint-parser',

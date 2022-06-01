@@ -10,5 +10,5 @@
   "vetur.validation.interpolation": false,
   "vetur.validation.template": false,
   "vetur.validation.style": false,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
 }
