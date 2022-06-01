@@ -1,15 +1,8 @@
 <template>
-  <router-view />
+  <div
+    mx-auto
+    max-w-1920px
+  >
+    <router-view />
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Arial', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
