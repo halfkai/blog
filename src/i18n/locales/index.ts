@@ -1,17 +1,13 @@
 import en from './en';
 import zh from './zh';
-
-const dict = {
-  Dictionary: '字典',
-};
-
-type MergedEn = typeof en & Record<keyof typeof dict, keyof typeof dict>;
-type MergedZh = typeof zh & typeof dict;
+import dict, { DictKeys } from './dict';
 
 export default {
-  zh: Object.assign(zh, dict) as MergedZh,
+  zh: Object.assign(zh, dict),
   en: Object.assign(
     en,
-    Object.fromEntries(Object.keys(dict).map((key) => [key, key])),
-  ) as MergedEn,
+    (Object.fromEntries(
+      Object.keys(dict).map((k) => [k, k]),
+    ) as { [K in DictKeys]: K }),
+  ),
 };
