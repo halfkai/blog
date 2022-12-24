@@ -1,0 +1,1 @@
+System.register(["./index-legacy.48f9efba.js"],(function(e){"use strict";var t,n,r,u;return{setters:[function(e){t=e._,n=e.o,r=e.c,u=e.t}],execute:function(){e("default",t({},[["render",function(e,t){return n(),r("div",null," Home, "+u(e.$t("Hi")),1)}]]))}}}));
