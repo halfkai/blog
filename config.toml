@@ -2,23 +2,33 @@
 base_url = "https://blog.halfkai.com/"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+default_language = "zh"
+
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
+
 [extra]
 # Put all your custom variables here
-
+author = "hk"
+locale = "zh"
 
 [languages]
-    [languages.en]
-        title = "Halfkai's Pages"
 
-    [languages.zh]
-        title = "半块 Kai 的博客"
+
+[languages.en]
+title = "Halfkai's Pages"
+intro = "Intro"
+virtual_dom = "Virtual DOM"
+
+[languages.zh]
+title = "半块kai的页面"
+intro = "介绍"
+virtual_dom = "虚拟DOM节点"
