@@ -14,7 +14,7 @@ dist-ssr
 .DS_Store
 
 # yarn
-.yarn/*
+.yarn
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
