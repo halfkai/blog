@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ config.title | safe }}
+    {{ page.title }} - {{ config.title | safe }}
 {% endblock %}
 
 {% block head %}
@@ -13,6 +13,5 @@
 {% endblock %}
 
 {% block content %}
-    {# {{ post::list_posts(pages = ) }} #}
     {{ table_of_contents::table_of_contents(page = section) }}
 {% endblock %}

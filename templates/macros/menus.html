@@ -1,0 +1,37 @@
+{% macro menu() %}
+    <script>
+        const blurNavGroup = () => {
+            const dom = document.querySelector('#navGroup');
+            dom.blur();
+        }
+    </script>
+    <div relative cursor-pointer sm="pointer-events-none" class="group" tabindex="1" id="navGroup" onmouseleave="blurNavGroup()">
+        <a p-1em h-1.4em w-1.4em block m-auto box-content sm="absolute flex h-0 w-0 opacity-0" hover="bg-zinc-200">
+            {{ icon::icon(id = 'menu') }}
+        </a>
+        <nav
+            py-1em
+            px-.5em
+            font-mono
+            absolute
+            opacity-0
+            w-0
+            h-0
+            pointer-events-none
+            group-focus="opacity-100 w-auto h-auto py-.5em leading-10 left-0 top-100% bg-stone-100 rounded pointer-events-auto"
+            sm="flex w-auto h-auto opacity-100 relative leading-unset pointer-events-auto"
+        >
+            <h2 m-0 mx-.5em font-bold hover="text-sky-600">
+                <a inline-block href="/coding">coding</a>
+            </h2>
+            <span display-none sm="inline-block" font-bold>&</span>
+            <h2 m-0 mx-.5em font-bold hover="text-sky-600">
+                <a inline-block href="/loving">loving</a>
+            </h2>
+            <span display-none sm="inline-block" font-bold>&</span>
+            <h2 m-0 mx-.5em font-bold hover="text-sky-600">
+                <a inline-block href="/living">living</a>
+            </h2>
+        </nav>
+    </div>
+{% endmacro menu %}

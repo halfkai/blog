@@ -1,0 +1,10 @@
+{% macro loading(page) %}
+    <div flex justify-between align-center bg-zinc-100 w-full>
+        {{ menus::menu() }}
+        <div flex p-1em>
+            <a flex h-1.4em w-1.4em m-auto>
+                {{ icon::icon(id = 'translate') }}
+            </a>
+        </div>
+    </div>
+{% endmacro loading %}

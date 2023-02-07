@@ -1,23 +1,35 @@
 {% import "macros/head.html" as head %}
+{% import "macros/menus.html" as menus %}
+{% import "macros/header.html" as header %}
+{% import "macros/post.html" as post %}
 {% import "macros/utilities/seo.html" as seo %}
-
+{% import "macros/utilities/icon.html" as icon %}
+{% import "macros/table_of_contents.html" as table_of_contents %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ config.default_language }}">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{% endblock %}</title>
-  {% block head %}{% endblock %}
-  {{ seo::google_search_console() }}
-  {{ seo::google_analytics() }}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+    {{ seo::google_search_console() }}
+    {{ seo::google_analytics() }}
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js" as="script" />
+    <link rel="preload" href="/styles/index.css" as="style" />
+    <link rel="preload" href="/images/icons.svg" as="image" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
 </head>
+
 <body>
-  <section>
-    <div>
-      {% block content %}{% endblock %}
-    </div>
-  </section>
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
 </body>
+
 </html>
