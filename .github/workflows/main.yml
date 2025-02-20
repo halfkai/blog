@@ -20,16 +20,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          check-latest: true
-          cache: 'yarn'
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
       - run: |
-          yarn --immutable
-          yarn build && cp -R docs dist && cp _config.yml dist
-      - uses: peaceiris/actions-gh-pages@v3
+          bun i
+          bun build && cp -R posts dist && cp _config.yml dist
+      - uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

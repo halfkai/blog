@@ -1,2 +1,1 @@
-# Blog by TomH
-
+# Blog by Tom

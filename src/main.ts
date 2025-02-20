@@ -1,18 +1,5 @@
-import { createApp } from 'vue';
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
 
-import App from './App.vue';
-import router from './router';
-import stores from './stores';
-import i18n from './i18n';
-
-import 'normalize.css';
-import 'uno.css';
-import './index.css';
-
-const app = createApp(App);
-
-app.use(router);
-app.use(stores);
-app.use(i18n);
-
-app.mount('#app');
+createApp(App).mount('#app')
