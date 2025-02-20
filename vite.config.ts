@@ -7,7 +7,7 @@ import legacy from '@vitejs/plugin-legacy';
 // https://vite.dev/config/
 export default defineConfig(() => ({
   base: '/blog/',
-  plugins: [vue(), unocss(), legacy({ targets: ['not IE 11', 'Chrome58'] })],
+  plugins: [vue(), unocss(), legacy({ targets: ['defaults', 'not IE 11'] })],
   resolve: {
     alias: {
       '/blog/posts': path.join(__dirname, './posts'),
