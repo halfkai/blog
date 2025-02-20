@@ -1,10 +1,10 @@
 # jekyll theme config
 email: 0x158105@gmail.com
+title: Tom's Blog
 lsi: false
 safe: true
 incremental: false
 highlighter: rouge
-theme: jekyll-theme-architect
 gist:
   noscript: false
 markdown: kramdown
