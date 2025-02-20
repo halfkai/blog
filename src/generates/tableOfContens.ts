@@ -1,0 +1,1 @@
+export default [["/blog/posts/index.md","NodeJS & JavaScript"]] as const
