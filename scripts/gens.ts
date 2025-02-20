@@ -7,7 +7,6 @@ import {
   mkdirSync,
   ReadStream,
   unlinkSync,
-  writeFileSync,
 } from 'fs';
 import { open } from 'fs/promises';
 
@@ -31,7 +30,8 @@ export const genTableOfContents = async () => {
           titleMap.set(
             path
               .relative(__dirname, filepath.toString())
-              .replace('../', '/blog/'),
+              .replace('../', '/blog/')
+              .split('.')[0],
             title
           );
         }
